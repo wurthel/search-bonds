@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 10fc30d965f5dccf0d879fa6702945cd8c249f6e5a0ee6893b4e6f559e1274c9
+
+name:           search-bonds
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/search-bonds#readme>
+homepage:       https://github.com/githubuser/search-bonds#readme
+bug-reports:    https://github.com/githubuser/search-bonds/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/search-bonds
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_search_bonds
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable search-bonds-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_search_bonds
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , search-bonds
+  default-language: Haskell2010
+
+test-suite search-bonds-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_search_bonds
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , search-bonds
+  default-language: Haskell2010
