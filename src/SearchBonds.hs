@@ -55,7 +55,7 @@ searchBonds a b d molecule
 searchBondsSame :: String -> CompAccur -> Molecule -> [(ID, ID)]
 searchBondsSame a d molecule =
     let w = Map.toList . Map.filter (\x -> get element x == a) $ molecule
-        isNear a b = (x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2 <= d
+        isNear a b = (x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2 <= d^2
                      where (x1, y1, z1) = get coordin a
                            (x2, y2, z2) = get coordin b
         searchBonds' (s:[]) = []
@@ -65,7 +65,7 @@ searchBondsSame a d molecule =
 searchBondsDiff :: String -> String -> CompAccur -> Molecule -> [(ID, ID)]
 searchBondsDiff a b d molecule =
     let w = Map.toList . Map.filter (\x -> get element x `elem` [a, b]) $ molecule
-        isNear a b = (x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2 <= d
+        isNear a b = (x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2 <= d^2
                      where (x1, y1, z1) = get coordin a
                            (x2, y2, z2) = get coordin b
         searchBonds' (s:[]) = []
