@@ -4,7 +4,7 @@
 заданного. 
 
 Пример запуска программы:
-./search-bonds-exe 1M0L.pdb C S 2.4 result 
+./search-bonds-exe 1M0L.pdb C N 1.8 result 
 
 где аргументы:
 1) 1M0L.pdb - файл с молекулой в формате PDB;
