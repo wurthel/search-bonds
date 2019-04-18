@@ -39,7 +39,7 @@ script:
 # Build the package, its tests, and its docs and run the tests
 - stack install
 - mv /home/travis/.local/bin/search-bonds-exe search-bonds-exe
-- pwd
+- chmod 755 search-bonds-exe
 
 deploy:
   provider: pages
