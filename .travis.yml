@@ -41,7 +41,8 @@ script:
 - mv /home/travis/.local/bin/search-bonds-exe search-bonds-exe
 
 deploy:
-  provider: linux-version
+  provider: pages
+  target_branch: master-linux-version
   skip_cleanup: true
   github_token: $TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
