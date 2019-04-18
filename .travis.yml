@@ -45,5 +45,4 @@ deploy:
   api_key: $TOKEN
   file: "/home/travis/.local/bin/search-bonds-exe-linux"
   skip_cleanup: true
-  on:
-    tags: false
+  draft: true
