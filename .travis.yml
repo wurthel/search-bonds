@@ -38,12 +38,12 @@ install:
 script:
 # Build the package, its tests, and its docs and run the tests
 - stack install
-- mv /home/travis/.local/bin/search-bonds-exe /home/travis/.local/bin/search-bonds-exe-linux
+- mv /home/travis/.local/bin/search-bonds-exe search-bonds-exe
+- pwd
 
 deploy:
   provider: pages
   skip_cleanup: true
-  deployment_file: /home/travis/.local/bin/search-bonds-exe-linux
   github_token: $TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
