@@ -43,6 +43,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
+  deployment_file: /home/travis/.local/bin/search-bonds-exe-linux
   github_token: $TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
