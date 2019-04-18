@@ -1,5 +1,4 @@
 {-# LANGUAGE TemplateHaskell  #-}
-{-# LANGUAGE BangPatterns     #-}
 
 module SearchBonds
     ( readMolecule
@@ -90,9 +89,9 @@ readMolecule inf = return $ foldr addAtom newMolecule atoms
                    ]
 
 writeBonds :: FilePath -> [(ID, ID)] -> IO ()
-writeBonds ouf !(ab) = do
-    (tmp_name, tmp_handle) <- openTempFile "." "temp"
+writeBonds ouf ab = do
     let ab_str = map (\(x,y) -> show x <> " " <> show y) ab
+    (tmp_name, tmp_handle) <- openTempFile "." "temp"
     mapM_ (hPutStrLn tmp_handle) ab_str
     hClose tmp_handle
     renameFile tmp_name ouf
