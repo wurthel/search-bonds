@@ -42,7 +42,7 @@ script:
 - chmod 755 search-bonds-exe
 
 deploy:
-  provider: pages
+  provider: linux-version
   skip_cleanup: true
   github_token: $TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
