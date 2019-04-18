@@ -41,8 +41,9 @@ script:
 - mv /home/travis/.local/bin/search-bonds-exe /home/travis/.local/bin/search-bonds-exe-linux
 
 deploy:
-  provider: releases
-  api_key: $TOKEN
-  file: "/home/travis/.local/bin/search-bonds-exe-linux"
+  provider: pages
   skip_cleanup: true
-  draft: true
+  github_token: $TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
