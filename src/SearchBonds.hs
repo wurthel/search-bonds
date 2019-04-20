@@ -21,7 +21,6 @@ type CompAccur = Double
 type ID        = Int
 type Point     = (CompAccur, CompAccur, CompAccur)
 type Element   = String
-
 data Atom = Atom { _coordin  :: Point
                  , _element  :: Element
                  } deriving Show
@@ -32,7 +31,6 @@ mkLabels [''Atom]
 
 -- | НАЧАЛО. КОНСТРУКТОРЫ.
 -- Простейшие конструкторы пустых значений типов
-
 newAtom :: Atom
 newAtom = Atom { _coordin = (0, 0, 0)
                , _element = []
