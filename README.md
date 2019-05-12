@@ -11,3 +11,7 @@
 2) C N - атомы, расстояние между которыми оценивается;
 3) 1.8 - верхняя граница допустимого расстояния между атомами;
 4) result - файл с результатом работы программы.
+
+### Build Status
+
+[![Build Status](https://travis-ci.org/wurthel/search-bonds.svg?branch=master)](https://travis-ci.org/wurthel/search-bonds)
